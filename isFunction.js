@@ -3,9 +3,9 @@ function classOf(e){return e===null?'null':e===undefined?'undefined':toStringOve
 
 
 
-function isFunction(e){var s='function';return typeof e===s?classOf(e)===s:false};
+//function isFunction(e){var s='function';return typeof e===s?classOf(e)===s:false};
 
-
+function isFunction(e,i){var s='function';return typeof e===s?i?classOf(e)===s:true:false};//@ i:strongcheck
 
 
 console.clear();
@@ -24,6 +24,4 @@ Error(),new Error()];
 m.forEach(function(x,j){
 console.log(isFunction(x));
 });
-
-
 
